@@ -6,7 +6,7 @@ COPY entrypoint.sh /
 COPY autoconfig.php /
 
 RUN \
-    apk add --no-cache freetype libjpeg-turbo libsasl libldap libldapcpp openssl libzip graphicsmagick ffmpeg unzip wget \
+    apk add --no-cache freetype libjpeg-turbo libsasl libldap libldapcpp openssl libzip graphicsmagick ffmpeg unzip wget pngquant \
     && apk add --no-cache --virtual .dev-deps \
         freetype-dev libjpeg-turbo-dev libzip-dev openldap-dev openssl-dev \
     && docker-php-ext-configure zip \
