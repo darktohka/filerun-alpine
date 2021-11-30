@@ -7,7 +7,7 @@ RUN \
     addgroup -g 4300 -S filerun \
     && adduser -u 4300 -S filerun -G filerun \
 # Install dependencies
-    && apk add --no-cache freetype libjpeg-turbo libsasl libldap libldapcpp openssl libzip imagemagick imagemagick-c++ ffmpeg unzip wget pngquant \
+    && apk add --no-cache freetype libjpeg-turbo libsasl libldap openssl libzip imagemagick imagemagick-c++ ffmpeg unzip wget pngquant \
 # Install build-time dependencies
     && apk add --no-cache --virtual .dev-deps \
         freetype-dev libjpeg-turbo-dev libzip-dev openldap-dev openssl-dev imagemagick-dev \
