@@ -7,10 +7,10 @@ RUN \
     addgroup -g 4300 -S filerun \
     && adduser -u 4300 -S filerun -G filerun \
 # Install dependencies
-    && apk add --no-cache freetype libjpeg-turbo libsasl libldap openssl libzip imagemagick imagemagick-c++ ffmpeg unzip wget pngquant \
+    && apk add --no-cache freetype libjpeg-turbo libsasl libldap openssl libzip imagemagick imagemagick-c++ ffmpeg unzip wget pngquant tiff libwebp libheif giflib vips \
 # Install build-time dependencies
     && apk add --no-cache --virtual .dev-deps \
-        freetype-dev libjpeg-turbo-dev libzip-dev openldap-dev openssl-dev imagemagick-dev \
+        freetype-dev libjpeg-turbo-dev libzip-dev openldap-dev openssl-dev imagemagick-dev tiff-dev libwebp-dev libheif-dev giflib-dev vips-dev \
 # Configure PHP extensions
     && docker-php-ext-configure zip \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
